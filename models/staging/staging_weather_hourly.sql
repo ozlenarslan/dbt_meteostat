@@ -3,7 +3,7 @@ WITH hourly_raw AS (
             airport_code,
             station_id,
             JSON_ARRAY_ELEMENTS(extracted_data -> 'data') AS json_data
-    FROM {{source('staging_weather, 'weather_hourly_raw')}}
+    FROM {{source('staging_weather', 'weather_hourly_raw')}}
 ),
 hourly_data AS (
     SELECT  
