@@ -1,13 +1,13 @@
 version: 2
 sources:
 
-- name: weather_data
+- name: staging_weather
   schema: s_oezlenarslan
   tables:
     - name: weather_daily_raw
     - name: weather_hourly_raw
 
-- name: staging_data
+- name: staging_flights
   schema: public
   tables:
     - name: flights
