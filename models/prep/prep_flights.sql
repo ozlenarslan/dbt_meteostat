@@ -26,9 +26,5 @@ WITH flights_january AS (
             ,diverted
     FROM flights_january
     )
-    SELECT * FROM flights_cleaned
-            ,cancelled
-            ,diverted
-    FROM flights_one_month
-)
+
 SELECT * FROM flights_cleaned
