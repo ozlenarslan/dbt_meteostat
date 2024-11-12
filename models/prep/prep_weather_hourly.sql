@@ -5,7 +5,7 @@ WITH hourly_data AS (
 add_features AS (
     SELECT *
 		, timestamp::DATE AS date -- only time (hours:minutes:seconds) as TIME data type
-		, timestamp::AS time -- only time (hours:minutes:seconds) as TIME data type
+		, timestamp::TIME AS time -- only time (hours:minutes:seconds) as TIME data type
         , TO_CHAR(timestamp,'HH24:MI') as hour -- time (hours:minutes) as TEXT data type
         , TO_CHAR(timestamp, 'FMmonth') AS month_name -- month name as a text
         , TO_CHAR(timestamp, 'FMday') AS weekday -- weekday name as text        
