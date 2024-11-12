@@ -7,7 +7,7 @@ WITH departures AS (
 					COUNT(dep_time) AS dep_n_flights,
 					COUNT(DISTINCT tail_number) AS dep_nunique_tails,
 					COUNT(DISTINCT airline) AS dep_nunique_airlines
-			FROM {{ref('prep_flights')}}
+			FROM {{ref('prep_flights')}},
 			GROUP BY origin;
 ),
 -----this is going to be another CTE step
@@ -20,7 +20,7 @@ arrivals AS (
 					COUNT(arr_time) AS arr_n_flights,
 					COUNT(DISTINCT tail_number) AS arr_nunique_tails,
 					COUNT(DISTINCT airline) AS arr_nunique_arilines
-			FROM {{ref('prep_flights')}}
+			FROM {{ref('prep_flights')}},
 			GROUP BY dest;
 ),
 total_stats AS (
