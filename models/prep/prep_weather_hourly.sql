@@ -11,7 +11,7 @@ add_features AS (
         , TO_CHAR(timestamp, 'FMday') AS weekday -- weekday name as text        
         , DATE_PART('day', timestamp) AS date_day
 		    , DATE_PART('month', timestamp) AS date_month
-		    , DATE_PART('year', time) AS date_year
+		    , DATE_PART('year', timestamp) AS date_year
 		    , DATE_PART('week', timestamp) AS cw
     FROM hourly_data
 ),
